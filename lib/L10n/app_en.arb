@@ -1,5 +1,52 @@
 {
-    "language" :"English" ,
-     "ride":"Request Ride"
+    "language" :"English",
+    "@language":{
+        "description":"The current language"
+    },
+     "ride":"Make an Order",
+     "@ride": {
+         "description":"A programmer greeting"
+     },
+     "ridedetail":"Request delivery confirmed  by a \n       nearby trusted vendor",
+     "@ridedetail": {
+         "description":"A programmer"
+     },
+
+     "skip":"Skip",
+     "@Skip": {
+         "description":"Skip"
+     },
+    
+
+     "drive":"Confirm Your Driver",
+     "@drive": {
+         "description":"drive"
+     },
+
+     "drivedetail":"Huge truck network helps you find \n reliable, safe and cheap deliveries",
+     "@drivedetail": {
+         "description":"drivedetail"
+     },
+     "truck":"Track your stuff",
+     "@truck": {
+         "description":"Track"
+     },
+      "truckdetail":"Know your driver in advance and be \n able to veiw current location in real time on the Map",
+     "@truckdetail": {
+         "description":"Know your driver"
+     },
+
+     "start":"GET STARTED!",
+     "@start": {
+         "description":"STARTED!"
+     },
+     "meet":"Hi nice to meet you !",
+     "@meet": {
+         "description":"nice"
+     },
+     "meetdetail":"Choose you location to start finding \n your perfect logistic vender",
+     "@meetdetail": {
+         "description":"you location"
+     }
     
 }

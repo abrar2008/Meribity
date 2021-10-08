@@ -5,6 +5,7 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:google_maps_place_picker/google_maps_place_picker.dart';
 import 'package:meribilty/loading_option.dart';
 import 'package:meribilty/selectvehicle.dart';
+import 'package:meribilty/timewait.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
 import 'package:getwidget/getwidget.dart';
 
@@ -282,7 +283,12 @@ Widget _scrollingList(ScrollController sc, BuildContext context) {
                   color: Color(0xFF4CE5B1),
                   textColor: Colors.black,
                   size: 60,
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Timewait()),
+                    );
+                  },
                   text: "BOOK NOW",
                   type: GFButtonType.solid,
                 ),

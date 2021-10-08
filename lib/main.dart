@@ -3,7 +3,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:meribilty/L10n/l10n.dart';
 import 'package:meribilty/provider/provider.dart';
 import 'package:meribilty/splashscreen.dart';
-// import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider(
         create: (_) => LocaleProvider(),
         builder: (context, child) {
-          final provider = Provider.of<LocaleProvider>(context);
+          final provider = context.watch<LocaleProvider>();
           return MaterialApp(
             title: 'Meribilty',
             debugShowCheckedModeBanner: false,
@@ -27,10 +27,10 @@ class MyApp extends StatelessWidget {
               primarySwatch: Colors.blue,
               primaryColor: Color(0xFF4CE5B1),
             ),
-            // locale: provider.locale,
+            locale: provider.locale,
             supportedLocales: L10n.all,
             localizationsDelegates: [
-              // AppLocalizations.delegate,
+              AppLocalizations.delegate,
               GlobalMaterialLocalizations.delegate,
               GlobalCupertinoLocalizations.delegate,
               GlobalWidgetsLocalizations.delegate,
@@ -40,4 +40,3 @@ class MyApp extends StatelessWidget {
         });
   }
 }
- 

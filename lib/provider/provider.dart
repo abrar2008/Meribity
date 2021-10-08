@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:meribilty/L10n/l10n.dart';
 
 class LocaleProvider extends ChangeNotifier {
-  late Locale _locale;
+  Locale _locale = const Locale('hi');
 
   Locale get locale => _locale;
 

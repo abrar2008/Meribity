@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+
 import 'package:meribilty/onbounding.dart';
 import 'package:meribilty/provider/provider.dart';
+
 import 'package:provider/provider.dart';
 
 class Language extends StatefulWidget {
@@ -15,6 +17,7 @@ class _LanguageState extends State<Language> {
   Widget build(BuildContext context) {
     // final provider = Provider.of<LocaleProvider>(context);
     // final locale = provider.locale ?? Locale('en');
+
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
@@ -65,11 +68,9 @@ class _LanguageState extends State<Language> {
                                   side: BorderSide(color: Colors.white)),
                             )),
                         onPressed: () {
-                          // final provider = Provider.of<LocaleProvider>(context,
-                          //     listen: false);
-
-                          // provider.setLocale(locale);
-
+                          final provide = context
+                              .read<LocaleProvider>()
+                              .setLocale(const Locale('en'));
                           Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
@@ -88,6 +89,9 @@ class _LanguageState extends State<Language> {
                         side: BorderSide(width: 3.0, color: Colors.white),
                       ),
                       onPressed: () {
+                        final provide = context
+                            .read<LocaleProvider>()
+                            .setLocale(const Locale('hi'));
                         Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(

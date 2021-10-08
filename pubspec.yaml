@@ -48,6 +48,7 @@ dependencies:
   google_maps_flutter:
   google_maps_place_picker:
   sliding_up_panel:
+  flutter_rating_bar:
 
   flutter_test:
     sdk: flutter
