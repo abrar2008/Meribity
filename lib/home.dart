@@ -1,8 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:meribilty/MainProfile.dart';
 import 'package:meribilty/darwer.dart';
 import 'package:meribilty/loading_select.dart';
+import 'package:meribilty/project.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -115,20 +117,30 @@ class _HomeState extends State<Home> {
                                 SizedBox(
                                   height: 10,
                                 ),
-                                Container(
-                                  padding: EdgeInsets.all(10),
-                                  height: 160,
-                                  width: 150,
-                                  decoration: new BoxDecoration(
-                                      color: Colors.white,
-                                      borderRadius: new BorderRadius.only(
-                                        topRight: const Radius.circular(20.0),
-                                        bottomLeft: const Radius.circular(20.0),
-                                        bottomRight:
-                                            const Radius.circular(20.0),
-                                      )),
-                                  child: Image.asset(
-                                    "assets/hom.png",
+                                InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => ProjectMain()),
+                                    );
+                                  },
+                                  child: Container(
+                                    padding: EdgeInsets.all(10),
+                                    height: 160,
+                                    width: 150,
+                                    decoration: new BoxDecoration(
+                                        color: Colors.white,
+                                        borderRadius: new BorderRadius.only(
+                                          topRight: const Radius.circular(20.0),
+                                          bottomLeft:
+                                              const Radius.circular(20.0),
+                                          bottomRight:
+                                              const Radius.circular(20.0),
+                                        )),
+                                    child: Image.asset(
+                                      "assets/hom.png",
+                                    ),
                                   ),
                                 ),
                                 SizedBox(

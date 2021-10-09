@@ -8,7 +8,7 @@ import 'package:getwidget/components/list_tile/gf_list_tile.dart';
 import 'package:getwidget/shape/gf_avatar_shape.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:meribilty/MyDeliveries.dart';
-import 'package:meribilty/stepper_demo.dart';
+
 import 'package:sliding_up_panel/sliding_up_panel.dart';
 
 class MainProfile extends StatefulWidget {
